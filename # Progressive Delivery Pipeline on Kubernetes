@@ -102,3 +102,13 @@ Failed instances are removed from service automatically.
 
 Resource Limits  
 CPU and memory constraints prevent a faulty container from affecting the node.
+
+## Operational Workflow
+
+Build the service container image  
+Deploy manifests to the cluster  
+Observe rollout status using pod readiness  
+Introduce a new application version  
+Verify gradual traffic shift to updated instances  
+Confirm stable rollout completion
+
