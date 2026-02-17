@@ -83,3 +83,22 @@ Introduces a new version gradually while the previous version continues serving 
 4. A small percentage of requests reach the new version
 5. If stable, rollout continues
 6. If unstable, rollback occurs
+
+## Reliability Controls
+
+This system focuses on reducing deployment risk rather than simply automating deployment.
+
+Readiness Probes  
+Traffic is routed only to instances that successfully pass health checks.
+
+Rolling Updates  
+Existing instances remain active while new instances start, avoiding downtime.
+
+Canary Rollout  
+Only a subset of users receive the new version during validation.
+
+Automatic Rollback  
+Failed instances are removed from service automatically.
+
+Resource Limits  
+CPU and memory constraints prevent a faulty container from affecting the node.
